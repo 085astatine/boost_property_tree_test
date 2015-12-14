@@ -16,3 +16,11 @@ find_package(Boost)
 message("Boost Include Directory: " ${Boost_INCLUDE_DIR})
 include_directories(
             ${Boost_INCLUDE_DIR})
+# Library
+add_library(card
+    card/card.cpp)
+# Executable
+add_executable(CardTest
+    card_test.cpp)
+target_link_libraries(CardTest
+    card)
