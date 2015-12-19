@@ -17,6 +17,8 @@ message("Boost Include Directory: " ${Boost_INCLUDE_DIR})
 include_directories(
             ${Boost_INCLUDE_DIR})
 # Library
+add_library(io
+    io/xml.cpp)
 add_library(card
     card/card.cpp)
 # Executable
