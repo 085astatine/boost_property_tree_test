@@ -1,3 +1,5 @@
+#include <iostream>
+#include <sstream>
 #include "./card.h"
 
 namespace card{
@@ -50,5 +52,14 @@ const int& CardData::cost() const{
 // Type
 const Type& CardData::type() const{
     return type_;
+}
+// show
+void show(const CardData& card){
+    std::ostringstream ss;
+    ss << "CardData" << std::endl
+       << "    Name: " << card.name() << std::endl
+       << "    Cost: " << card.cost() << std::endl
+       << "    Type: " << to_string(card.type()) << std::endl;
+    std::cout << ss.str();
 }
 }// end namespace card

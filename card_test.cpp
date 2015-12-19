@@ -8,8 +8,6 @@ int main(){
                 "ベルガモット",
                 6,
                 card::Type::Princess);
-    std::cout << card.name() << std::endl
-              << card.cost() << std::endl
-              << to_string(card.type()) << std::endl;
+    show(card);
     return 0;
 }

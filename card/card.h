@@ -38,5 +38,7 @@ private:
     int cost_;
     Type type_;
 };
+// show
+void show(const CardData& card);
 }// end namespace card
 #endif// CARD_CARD_H
