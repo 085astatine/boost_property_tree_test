@@ -62,4 +62,23 @@ void show(const CardData& card){
        << "    Type: " << to_string(card.type()) << std::endl;
     std::cout << ss.str();
 }
+// Card Data List
+// constructor
+CardDataList::CardDataList(
+            const std::vector<CardData>& card_list)
+      : card_list_(card_list){}
+// vector
+const std::vector<CardData>& CardDataList::vector() const{
+    return card_list_;
+}
+// iterator: begin
+std::vector<CardData>::const_iterator begin(
+            const CardDataList& card_list){
+    return card_list.vector().begin();
+}
+// iterator: end
+std::vector<CardData>::const_iterator end(
+            const CardDataList& card_list){
+    return card_list.vector().end();
+}
 }// end namespace card

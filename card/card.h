@@ -40,5 +40,21 @@ private:
 };
 // show
 void show(const CardData& card);
+// Card Data List
+class CardDataList{
+public:
+    // constructor
+    explicit CardDataList(
+                const std::vector<CardData>& card_list);
+    // vector
+    const std::vector<CardData>& vector() const;
+private:
+    std::vector<CardData> card_list_;
+};
+// iterator
+std::vector<CardData>::const_iterator begin(
+            const CardDataList& card_list);
+std::vector<CardData>::const_iterator end(
+            const CardDataList& card_list);
 }// end namespace card
 #endif// CARD_CARD_H
