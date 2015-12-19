@@ -6,8 +6,10 @@ int main(){
     
     card::CardData card(
                 "ベルガモット",
-                6);
+                6,
+                card::Type::Princess);
     std::cout << card.name() << std::endl
-              << card.cost() << std::endl;
+              << card.cost() << std::endl
+              << to_string(card.type()) << std::endl;
     return 0;
 }
