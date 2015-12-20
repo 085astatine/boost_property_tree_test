@@ -20,9 +20,11 @@ include_directories(
 add_library(io
     io/xml.cpp)
 add_library(card
-    card/card.cpp)
+    card/card.cpp
+    card/card_convert.cpp)
 # Executable
 add_executable(CardTest
     card_test.cpp)
 target_link_libraries(CardTest
-    card)
+    card
+    io)
