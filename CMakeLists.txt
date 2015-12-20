@@ -6,10 +6,6 @@ add_definitions(
             -Wextra)
 
 message("CXX Compiler ID: " ${CMAKE_CXX_COMPILER_ID})
-if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
-    add_definitions(-stdlib=libc++)
-endif()
-
 message("CMake System Name: " ${CMAKE_SYSTEM_NAME})
 
 find_package(Boost)
