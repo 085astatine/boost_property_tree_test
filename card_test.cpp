@@ -28,5 +28,10 @@ int main(){
         std::cout << "catch" << std::endl;
         std::cerr << e.what();// << std::endl;
     }
+    const boost::property_tree::ptree card_list_ptree =
+                card::to_xml_ptree(card_list);
+    for(const auto& card: card::load_card_list_xml_ptree(card_list_ptree)){
+        show(card);
+    }
     return 0;
 }
