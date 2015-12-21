@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<card_list>
+    <card name="ベルガモット">
+        <cost>6</cost>
+        <type>プリンセス</type>
+    </card>
+    <card name="見習い侍女">
+        <cost>2</cost>
+        <type>継承権</type>
+    </card>
+</card_list>

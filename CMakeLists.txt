@@ -25,3 +25,8 @@ add_executable(CardTest
 target_link_libraries(CardTest
     card
     io)
+add_executable(XMLTest
+    xml_test.cpp)
+target_link_libraries(XMLTest
+    card
+    io)
