@@ -2,6 +2,7 @@
 #include "./io/xml.h"
 #include "./card/card.h"
 #include "./card/card_convert.h"
+#include "./exception/enum_convert_error.h"
 
 int main(){
     std::cout << "Card Test" << std::endl;
@@ -20,5 +21,12 @@ int main(){
     io::save_xml(
                 "test_output.xml",
                 card::to_xml_ptree(card_list));
+    try{
+        const card::Type type = card::to_type("hoge");
+        std::cout << to_string(type) << std::endl;
+    }catch(const exception::EnumConvertError& e){
+        std::cout << "catch" << std::endl;
+        std::cerr << e.what();// << std::endl;
+    }
     return 0;
 }

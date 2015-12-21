@@ -17,7 +17,8 @@ add_library(io
     io/xml.cpp)
 add_library(card
     card/card.cpp
-    card/card_convert.cpp)
+    card/card_convert.cpp
+    exception/enum_convert_error.cpp)
 # Executable
 add_executable(CardTest
     card_test.cpp)

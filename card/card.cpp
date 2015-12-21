@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include "./card.h"
+#include "../exception/enum_convert_error.h"
 
 namespace card{
 // Type
@@ -31,6 +32,7 @@ Type to_type(
             return type;
         }
     }
+    throw exception::EnumConvertError(string_data, "card::Type");
 }
 // Card Data
 // constructor
